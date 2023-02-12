@@ -35,11 +35,8 @@
   (app/mount! APP Sample "app"))
 
 (comment
-  (reset! (::app/state-atom APP) {:sample {:person/id   1
-                                           :person/name "Daniel"
-                                           :person/cars [{
-                                                          :car/id    22
-                                                          :car/model "Escort"
-                                                          }]}
-                                  })
+  (reset! (::app/state-atom APP) {})
+  (merge/merge-component! APP Person {:person/id 2
+                                      :person/name "Otra Marta"}) ; add new data to the state atom
+  (app/current-state APP)
   (app/schedule-render! APP))
