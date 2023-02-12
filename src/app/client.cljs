@@ -5,10 +5,10 @@
     [com.fulcrologic.fulcro.dom :as dom]))
 
 (defsc Sample [this props]
-       {}
-       (dom/div "Hello World"))
+  {}
+  (dom/div "HELLO WORLD!"))
 
-(def APP (app/fulcro-app))
+(defonce APP (app/fulcro-app))
 
 (defn ^:export init []
-      (app/mount! APP Sample "app"))
+  (app/mount! APP Sample "app"))
