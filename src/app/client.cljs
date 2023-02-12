@@ -13,12 +13,13 @@
 
 (def ui-car (comp/factory Car {:keyfn :car/id}))
 
-(defsc Person [this {:person/keys [id name cars] :as props}]
-  {}
+(defsc Person [this {:person/keys [id name ] :as props}]
+  {:query [:person/id :person/name]                         ; The :query parameter is used to specify the data that the component needs from the state in order to render properly
+   :ident :person/id}                                       ; This is a unique identifier for the component
   (dom/div
     (dom/div
     "Name: " name)
-    (dom/h3 "Cars")
+    #_#_(dom/h3 "Cars")
     (dom/ul
       (map ui-car cars))))                               ;A component Person is called where the id and names are destructured from the state
 
