@@ -1,20 +1,9 @@
 {
   "name": "fulcro-getting-started",
   "version": "1.0.0",
-  "description": "<a name=\"readme-top\"></a>",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carreraprogrammer/fulcro-getting-started.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/carreraprogrammer/fulcro-getting-started/issues"
-  },
-  "homepage": "https://github.com/carreraprogrammer/fulcro-getting-started#readme"
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "shadow-cljs": "^2.8.52"
+  }
 }
