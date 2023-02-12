@@ -6,12 +6,6 @@
     [com.fulcrologic.fulcro.algorithms.merge :as merge]
     [com.fulcrologic.fulcro.algorithms.data-targeting :as targeting]))
 
-
-(defsc Car [this {:tax/keys [iva ret] :as props}]
-  {}
-  (dom/div
-    "Retention: " ret))
-
 (defsc Car [this {:car/keys [id model] :as props}]
   {}
     (dom/div
@@ -42,11 +36,9 @@
 (comment
   (reset! (::app/state-atom APP) {:sample {:person/id   1
                                            :person/name "Daniel"
-                                           :person/cars [{:car/id    22
+                                           :person/cars [{
+                                                          :car/id    22
                                                           :car/model "Escort"
-                                                          :car/taxes [
-                                                                      {:tax/iva 19
-                                                                      :tax/ret 1}
-                                                                      ]}]}
+                                                          }]}
                                   })
   (app/schedule-render! APP))
