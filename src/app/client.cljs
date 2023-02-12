@@ -10,5 +10,12 @@
 
 (defonce APP (app/fulcro-app))
 
+(defn f [x]
+  (+ 2 2)
+  (* x x))
+
 (defn ^:export init []
   (app/mount! APP Sample "app"))
+
+(comment
+  (def a 33))
